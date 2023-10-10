@@ -43,15 +43,6 @@ apps:
     plugs: *_plugs
     environment: *_environment
 
-# This is one of four snippets that relate to providing the userspace graphics needed by your application.
-# You can treat this as "magic" so long as you don't need to make changes.
-# On the Mir website there's a lot more detail on [the graphics-core22 Snap interface](https://mir-server.io/docs/the-graphics-core22-snap-interface) and it's use.
-plugs:
-  graphics-core22:
-    interface: content
-    target: $SNAP/graphics
-    default-provider: mesa-core22
-
 environment:
   # Other, generally useful environment settings...
   # XDG config
@@ -130,20 +121,4 @@ parts:
       - liblua5.4-0
       - libsqlite3-0
       - wget
-
-  graphics-core22:
-    after:
-      # Your application packaging
-      - setup
-    source: https://github.com/MirServer/graphics-core22.git
-    plugin: dump
-    override-prime: |
-      craftctl default
-      ${CRAFT_PART_SRC}/bin/graphics-core22-cleanup mesa-core22 nvidia-core22
-      cd "$CRAFT_PRIME/usr/share/"
-      rm -rf bug drirc.d glvnd libdrm lintian man
-      rm -rf applications apport bash-completion dbus-1 doc-base doc gtk-doc\
-             help pkgconfig libthai metainfo themes thumbnailers xml
-    prime:
-      - bin/graphics-core22-wrapper
 
