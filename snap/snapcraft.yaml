@@ -83,11 +83,6 @@ layout:
 parts:
   etl:
     plugin: cmake
-    cmake-parameters:
-      - -DCROSS_COMPILE32=OFF
-      - -DBUNDLED_LIBS=OFF
-      - -DRENDERER_DYNAMIC=OFF
-      - -DINSTALL_OMNIBOT=OFF
     source-type: git
     source-tag: v2.81.1
     source: https://github.com/etlegacy/etlegacy
