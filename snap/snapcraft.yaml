@@ -98,14 +98,14 @@ parts:
       - libfreetype6-dev
       - libpng-dev
       - libsqlite3-dev
-      - libx11-dev
+      - libx11-dev	
       - libc6-dev
       - nasm
       - zip
 
     stage-packages:
       - libsdl2-2.0-0
-      - libjson-c4
+      - libjson-c
       - libcurl4
       - libminizip1
       - libtheora-bin
