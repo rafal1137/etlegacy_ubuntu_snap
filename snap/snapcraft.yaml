@@ -1,4 +1,4 @@
-name: etlegacy
+	name: etlegacy
 version: "v2.81.1"
 summary: FPS Game
 description: |
@@ -83,7 +83,7 @@ parts:
       - make
       - libcurl4-openssl-dev
       - libsdl2-dev
-      - liblua5.4-dev
+      - liblua5.3-dev
       - libopenal-dev
       - libtheora-dev
       - libglew-dev
@@ -118,7 +118,7 @@ parts:
       - freeglut3
       - libjpeg8
       - libstdc++6
-      - liblua5.4-0
+      - liblua5.3-0
       - libsqlite3-0
       - wget
 
