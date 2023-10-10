@@ -99,7 +99,6 @@ parts:
       - libpng-dev
       - libsqlite3-dev
       - libx11-dev
-      - libc-devtools
       - libc6-dev
       - nasm
       - zip
