@@ -108,7 +108,7 @@ parts:
       - git
     override-build: |
       snapcraftctl build
-      mkdir build && cd build && cmake . -DCROSS_COMPILE32=OFF -DBUNDLED_LIBS=OFF -DRENDERER_DYNAMIC=OFF -DINSTALL_OMNIBOT=OFF
+      mkdir build && cd build && cmake .. -DCROSS_COMPILE32=OFF -DBUNDLED_LIBS=OFF -DRENDERER_DYNAMIC=OFF -DINSTALL_OMNIBOT=OFF
 
     stage-packages:
       - libsdl2-2.0-0
