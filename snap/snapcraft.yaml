@@ -103,7 +103,6 @@ parts:
       - libc6-dev
       - nasm
       - zip
-      - cmake
       - autoconf
       - git
     override-build: |
