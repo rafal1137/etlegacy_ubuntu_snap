@@ -105,7 +105,7 @@ parts:
 
     stage-packages:
       - libsdl2-2.0-0
-      - libjson-c
+      - libjson-c3
       - libcurl4
       - libminizip1
       - libtheora-bin
