@@ -108,6 +108,8 @@ parts:
       - git
     override-build: |
       snapcraftctl build
+      mkdir -p /opt/cmake && wget --no-check-certificate --quiet -O - https://cmake.org/files/v3.24/cmake-3.24.2-linux-x86_64.tar.gz | tar --strip-components=1 -xz -C /opt/cmake
+      PATH="/opt/cmake/bin:${PATH}"
       mkdir build && cd build && cmake .. -DCROSS_COMPILE32=OFF -DBUNDLED_LIBS=OFF -DRENDERER_DYNAMIC=OFF -DINSTALL_OMNIBOT=OFF
 
     stage-packages:
