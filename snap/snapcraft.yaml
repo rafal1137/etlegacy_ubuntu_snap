@@ -110,7 +110,7 @@ parts:
       - libminizip1
       - libtheora-bin
       - libvorbisfile3
-      - libglew2.2
+      - libglew2.0
       - libgl1
       - libglu1-mesa
       - freeglut3
