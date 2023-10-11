@@ -103,9 +103,12 @@ parts:
       - libc6-dev
       - nasm
       - zip
+      - cmake
+      - autoconf
+      - git
     override-build: |
       snapcraftctl build
-      ./easybuild.sh build -32
+      mkdir build && cd build && cmake . -DCROSS_COMPILE32=OFF -DBUNDLED_LIBS=OFF -DRENDERER_DYNAMIC=OFF -DINSTALL_OMNIBOT=OFF
 
     stage-packages:
       - libsdl2-2.0-0
