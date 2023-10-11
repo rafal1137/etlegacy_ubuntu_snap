@@ -103,6 +103,9 @@ parts:
       - libc6-dev
       - nasm
       - zip
+    override-build: |
+      snapcraftctl build
+      ./easybuild.sh build -32
 
     stage-packages:
       - libsdl2-2.0-0
