@@ -13,7 +13,7 @@ grade: devel
 
 apps:
   etl:
-    command: &_command bin/run
+    command: &_command run
     plugs: &_plugs
       - opengl
       - wayland
@@ -28,7 +28,7 @@ apps:
       LD_LIBRARY_PATH: ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}${SNAP}/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}:${SNAP}/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/pulseaudio
 
   etl-ded:
-    command: bin/run-ded
+    command: run-ded
     plugs:
       - hardware-observe
       - network
